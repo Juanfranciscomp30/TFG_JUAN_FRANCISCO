@@ -1,0 +1,222 @@
+body {
+    background: #243342;
+    color: #031926;
+}
+
+/* Contenedor general */
+.instrumento-detalle .container {
+    background: #F4E9CD;
+    border-radius: 0;
+    box-shadow: 0 6px 36px 0px rgba(36,51,66,0.11);
+    padding: 2.5rem 2.2rem;
+    margin-bottom: 36px;
+}
+
+/* Imagen del instrumento */
+.instrumento-img {
+    max-width: 100%;
+    border-radius: 0;
+    background: #9DBEBB;
+    border: 2.5px solid #468189;
+    box-shadow: 0 1.5px 9px #03192611;
+}
+
+/* Bloque de info */
+.instrumento-detalle h1 {
+    font-size: 2.1rem;
+    font-weight: bold;
+    color: #031926;
+    margin-bottom: 24px;
+    letter-spacing: 1px;
+}
+.instrumento-detalle p {
+    font-size: 1.13rem;
+    color: #243342;
+    margin-bottom: 10px;
+}
+.instrumento-detalle strong i {
+    margin-right: 3px;
+}
+
+/* Formulario añadir carrito */
+.instrumento-detalle form button[type="submit"] {
+    background: #468189;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 0;
+    border: none;
+    padding: 10px 22px;
+    font-size: 1.08rem;
+    transition: background 0.18s;
+}
+.instrumento-detalle form button[type="submit"]:hover {
+    background: #031926;
+    color: #fff;
+}
+
+/* Radios colores disponibles */
+.form-check-input:checked {
+    background-color: #468189;
+    border-color: #468189;
+}
+.form-check-input {
+    border-radius: 0;
+}
+
+/* Bloque descripción */
+.descripcion {
+    margin-top: 36px;
+    padding: 1.2rem 1.5rem;
+    background: #9DBEBB;
+    color: #031926;
+    border-radius: 0;
+    border-left: 4.5px solid #468189;
+}
+
+/* Comentarios */
+.comentarios h3, .descripcion h3 {
+    color: #468189;
+    margin-bottom: 22px;
+    font-weight: 700;
+}
+.comentarios form textarea,
+#comentario_contenido {
+    border-radius: 0;
+    border: 1.5px solid #468189;
+    background: #F4E9CD;
+    color: #031926;
+    font-size: 1.06rem;
+}
+.comentarios form textarea:focus,
+#comentario_contenido:focus {
+    border-color: #77ACA2;
+    box-shadow: 0 0 0 2px #46818933;
+}
+.comentarios form button {
+    background: #77ACA2;
+    border-radius: 0;
+    border: none;
+    color: #243342;
+    font-weight: 600;
+    transition: background 0.18s, color 0.18s;
+}
+.comentarios form button:hover {
+    background: #468189;
+    color: #fff;
+}
+.list-group-item {
+    border-radius: 0 !important;
+    background: #F4E9CD;
+    color: #031926;
+    border: 1.5px solid #9DBEBB;
+    margin-bottom: 7px;
+}
+.btn-warning.btn-sm {
+    background: #9DBEBB;
+    color: #243342;
+    border: none;
+    border-radius: 0;
+    font-weight: 600;
+}
+.btn-warning.btn-sm:hover {
+    background: #468189;
+    color: #fff;
+}
+.btn-danger.btn-sm {
+    border-radius: 0;
+    background: #c13a3a;
+    color: #fff;
+    border: none;
+    font-weight: 600;
+}
+.btn-danger.btn-sm:hover {
+    background: #a01f1f;
+    color: #fff;
+}
+
+/* Modal edición */
+.modal-content {
+    border-radius: 0;
+    background: #F4E9CD;
+}
+.modal-header, .modal-footer {
+    border-radius: 0;
+    border: none;
+    background: #77ACA2;
+}
+.modal-title {
+    color: #031926;
+    font-weight: 700;
+}
+.btn-secondary {
+    background: #9DBEBB;
+    border-radius: 0;
+    color: #243342;
+    border: none;
+}
+.btn-secondary:hover {
+    background: #468189;
+    color: #fff;
+}
+
+.selector-colores {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-bottom: 8px;
+}
+.selector-colores input[type="radio"] {
+    display: none;
+}
+.selector-colores .color-circle-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 0;
+}
+.selector-colores .color-circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2.5px solid #468189;
+    margin-bottom: 4px;
+    box-shadow: 0 2px 6px #03192613;
+    transition: border-color 0.18s, box-shadow 0.18s;
+}
+.selector-colores input[type="radio"]:checked + .color-circle-label .color-circle {
+    border-color: #031926;
+    box-shadow: 0 0 0 3px #77ACA266;
+}
+.selector-colores .color-nombre {
+    font-size: 0.97rem;
+    color: #243342;
+    text-align: center;
+    margin-top: 1px;
+}
+
+.instrumento-detalle {
+    margin-top: 30px;
+}
+
+.instrumento-img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.descripcion {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+}
+
+
+@media (max-width: 991.98px) {
+    .instrumento-detalle .container {
+        padding: 1.2rem 0.5rem;
+    }
+    .descripcion {
+        padding: 1.1rem 0.5rem;
+    }
+}

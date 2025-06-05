@@ -1,0 +1,32 @@
+
+    .footer-custom {
+        background: #031926; /* Fondo principal */
+        color: #F4E9CD; /* Champagne */
+        border-top: 4px solid #468189; /* Borde superior metálico */
+        letter-spacing: 1px;
+    }
+    .footer-title {
+        color: #F4E9CD;
+        text-shadow: 0 2px 6px #03192660;
+    }
+    .footer-link {
+        color: #77ACA2; /* Green Sheen */
+        transition: color 0.2s;
+        font-size: 1.4em;
+    }
+    .footer-link:hover {
+        color: #9DBEBB; /* Opal */
+        text-decoration: none;
+    }
+    .footer-custom p {
+        margin-bottom: 0.6rem;
+    }
+    @media (max-width: 576px) {
+        .footer-custom {
+            font-size: 0.97em;
+            padding: 1rem 0;
+        }
+        .footer-link {
+            font-size: 1.1em;
+        }
+    }

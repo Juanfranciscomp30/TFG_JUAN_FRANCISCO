@@ -1,0 +1,97 @@
+:root {
+    --rich-black: #031926;
+    --metallic-seaweed: #468189;
+    --green-sheen: #77ACA2;
+    --opal: #9DBEBB;
+    --champagne: #F4E9CD;
+}
+body {
+    background: var(--champagne);
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    color: var(--rich-black);
+}
+.carrito-title {
+    font-weight: bold;
+    color: var(--metallic-seaweed);
+    letter-spacing: 1px;
+}
+.card {
+    border-radius: 22px;
+    box-shadow: 0 4px 18px rgba(3,25,38,0.09);
+    border: none;
+    background: var(--opal);
+    color: var(--rich-black);
+    transition: box-shadow .2s, transform .2s;
+}
+.card:hover {
+    box-shadow: 0 10px 36px rgba(70,129,137,0.14);
+    transform: translateY(-4px) scale(1.02);
+}
+.card-img-top {
+    border-radius: 22px 22px 0 0;
+    object-fit: cover;
+    height: 170px;
+    background: var(--champagne);
+}
+.badge-color {
+    background: var(--green-sheen);
+    color: var(--rich-black);
+    font-size: .98em;
+    margin-bottom: 6px;
+}
+.subtotal {
+    font-size: 1.1em;
+    font-weight: 500;
+    color: var(--rich-black);
+    background: var(--champagne);
+    border-radius: 10px;
+    padding: 4px 14px;
+    display: inline-block;
+}
+.btn-success, .btn-danger, .btn-outline-success {
+    border-radius: 15px;
+}
+.btn-success {
+    background: var(--metallic-seaweed);
+    border-color: var(--metallic-seaweed);
+}
+.btn-success:hover {
+    background: var(--green-sheen);
+    border-color: var(--green-sheen);
+    color: var(--rich-black);
+}
+.btn-outline-success {
+    border-color: var(--metallic-seaweed);
+    color: var(--metallic-seaweed);
+}
+.btn-outline-success:hover {
+    background: var(--metallic-seaweed);
+    color: #fff;
+}
+.total-cesta {
+    background: var(--green-sheen);
+    border-radius: 14px;
+    padding: 15px 27px;
+    font-size: 1.45em;
+    font-weight: bold;
+    text-align: right;
+    margin-bottom: 28px;
+    color: var(--rich-black);
+    box-shadow: 0 3px 12px rgba(70,129,137,0.14);
+    animation: totalFlash 0.7s;
+}
+@keyframes totalFlash {
+    0%   { background: #F4E9CD;}
+    70%  { background: var(--green-sheen);}
+    100% { background: var(--green-sheen);}
+}
+.empty-cart-emoji {
+    font-size: 4em;
+    color: var(--opal);
+    margin-bottom: 20px;
+    display: block;
+    text-align: center;
+}
+.shadow-sm {
+    box-shadow: 0 3px 12px rgba(3,25,38,0.12) !important;
+}

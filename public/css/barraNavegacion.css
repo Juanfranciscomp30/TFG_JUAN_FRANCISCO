@@ -1,0 +1,76 @@
+.custom-navbar {
+    background: #243342 !important;  /* Oscuro elegante, no tan negro */
+    border-radius: 0;
+    box-shadow: none;
+    border-bottom: 2.5px solid #468189; /* Línea inferior sutil */
+    min-height: 62px;
+}
+
+.custom-navbar .navbar-brand,
+.custom-navbar .logo-title {
+    color: #F4E9CD !important;
+    font-size: 1.25rem;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    letter-spacing: 2px;
+}
+
+.custom-navbar .navbar-nav .nav-link {
+    color: #F4E9CD !important;
+    font-weight: 500;
+    margin-right: 8px;
+    border-radius: 0;
+    padding: 8px 15px;
+    transition: background 0.16s, color 0.16s;
+}
+.custom-navbar .navbar-nav .nav-link:hover,
+.custom-navbar .navbar-nav .nav-link.active {
+    background: #468189;
+    color: #fff !important;
+    text-decoration: none;
+}
+.btn-cart {
+    background: #468189;
+    color: #fff !important;
+    font-weight: 600;
+    border-radius: 0;
+    border: none;
+    padding: 8px 16px;
+    font-size: 1.05rem;
+    letter-spacing: 0.5px;
+    margin-left: 6px;
+    margin-right: 6px;
+    transition: background 0.16s;
+}
+.btn-cart:hover, .btn-cart:focus {
+    background: #77ACA2;
+    color: #243342 !important;
+}
+.logout-btn {
+    color: #F4E9CD !important;
+    font-weight: 500;
+    border-radius: 0;
+    padding: 8px 15px;
+    transition: background 0.16s, color 0.16s;
+}
+.logout-btn:hover {
+    background: #468189;
+    color: #fff !important;
+    text-decoration: none;
+}
+
+@media (max-width: 991.98px) {
+    .custom-navbar {
+        border-radius: 0;
+    }
+    .navbar-brand {
+        font-size: 1.1rem;
+    }
+    .btn-cart, .custom-navbar .navbar-nav .nav-link, .logout-btn {
+        padding: 7px 10px;
+        margin-bottom: 4px;
+    }
+    .custom-navbar .navbar-collapse {
+        background: #243342;
+        border-radius: 0;
+    }
+}
