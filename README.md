@@ -108,8 +108,29 @@ Bienvenido/a a mi Trabajo de Fin de Grado: una plataforma web para la compra-ven
 
    ```bash
    git clone https://github.com/Juanfranciscomp30/TFG.git
-   cd TFG/backend
-Instala las dependencias
+   cd TFG/backend```
 
-El frontend: archivos en la carpeta frontend (JS + Bootstrap, para usar junto con el backend)
->>>>>>> a7106751ad74b8da438a4d8ef037fc1ec770706d
+2. **Instala las dependencias**
+ ```bash
+    composer install
+    npm install
+ ```
+3. **Instala las dependencias**
+ ```bash
+    composer install
+    npm install
+```
+4. **Genera la clave de aplicación**
+ ```bash
+    php artisan key:generate
+```
+
+5. **Migra y carga datos iniciales y arranca el servidor**
+ ```bash
+    php artisan migrate --seed
+    php artisan serve
+```
+### Acceso a la aplicación
+
+- **Backend:** [http://localhost:8000](http://localhost:8000)
+- **Frontend:** Archivos en la carpeta `frontend` (JS + Bootstrap, para usar junto con el backend)
