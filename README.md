@@ -61,6 +61,55 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 =======
-# TFG
-Tienda de Música
+# TFG JUAN FRANCISCO · Tienda de Instrumentos Musicales
+
+Bienvenido/a a mi Trabajo de Fin de Grado: una plataforma web para la compra-venta de instrumentos musicales, desarrollada con **Laravel** en el backend y **JavaScript + Bootstrap** en el frontend.
+
+---
+
+## ✨ Funcionalidades principales
+
+- Registro y login de usuarios
+- Listado de instrumentos y detalles
+- Carrito de compra
+- Control de stock en tiempo real
+- Gestión de compras y formulario de datos de envío
+- Sistema de comentarios en los productos
+- Panel de administración (CRUD de instrumentos, gestión de stock, etc.)
+- Paleta de colores personalizada y estilos responsivos
+- Animaciones y alertas visuales con [Animate.css](https://animate.style/)
+- Iconos con [Font Awesome](https://fontawesome.com/)
+
+---
+
+## 🎨 Paleta de colores
+
+| Nombre               | Hex       |
+|----------------------|-----------|
+| Rich Black           | #031926   |
+| Metallic Seaweed     | #468189   |
+| Green Sheen          | #77ACA2   |
+| Opal                 | #9DBEBB   |
+| Champagne            | #F4E9CD   |
+
+---
+
+## 📚 Librerías utilizadas
+
+- [Bootstrap](https://getbootstrap.com/) (estilos y diseño responsive)
+- [Font Awesome](https://fontawesome.com/) (iconos)
+- [Animate.css](https://animate.style/) (animaciones visuales)
+
+---
+
+## 🚀 Instalación local
+
+1. **Clona el repositorio**
+
+   ```bash
+   git clone https://github.com/Juanfranciscomp30/TFG.git
+   cd TFG/backend
+Instala las dependencias
+
+El frontend: archivos en la carpeta frontend (JS + Bootstrap, para usar junto con el backend)
 >>>>>>> a7106751ad74b8da438a4d8ef037fc1ec770706d
