@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <title>Carrito</title>
+    <link rel="icon" type="image/x-icon" href="{{ asset('images/SonArte.png') }}">
     <link rel="stylesheet" href="{{ asset('css/carrito.css') }}">
 </head>
 
@@ -34,21 +35,20 @@
         @endif
 
         @if(session('error'))
-            <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                {{ session('error') }}
-                <button type="button" class="close" data-dismiss="alert" aria-label="Cerrar">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
+            <div class="alert alert-danger text-center mt-2">{{ session('error') }}</div>
         @endif
+
+        @if(session('success'))
+            <div class="alert alert-success text-center mt-2">{{ session('success') }}</div>
+        @endif
+
 
         @if(session('carrito') && count(session('carrito')) > 0)
             <div class="row">
                 @foreach(session('carrito') as $id => $item)
                     <div class="col-md-4 mb-4 card-item-{{$item['id']}}">
                         <div class="card shadow-sm h-100">
-                            <img src="https://via.placeholder.com/400x170?text={{ urlencode($item['marca']) }}"
-                                class="card-img-top" alt="Instrumento">
+                            <img src="/{{ $item['foto']}}" class="img-instrumento" alt="Instrumento">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title mb-2">{{ $item['marca'] }} - {{ $item['modelo'] }}</h5>
                                 <span class="badge badge-color px-2 py-1"><i class="fa-solid fa-palette"></i>
@@ -101,12 +101,12 @@
             </div>
 
             <div class="text-right mb-5">
-            <button type="button" class="btn btn-success px-4 py-2" data-toggle="modal" data-target="#modalFinalizarCompra">
-    <i class="fa-solid fa-credit-card"></i> Finalizar Compra
-</button>
+                <button type="button" class="btn btn-success px-4 py-2" data-toggle="modal"
+                    data-target="#modalFinalizarCompra">
+                    <i class="fa-solid fa-credit-card"></i> Finalizar Compra
+                </button>
             </div>
 
-            <!-- Modal Finalizar Compra -->
             <div class="modal fade" id="modalFinalizarCompra" tabindex="-1" aria-labelledby="modalFinalizarCompraLabel"
                 aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">

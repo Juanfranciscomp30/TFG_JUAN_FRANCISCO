@@ -46,11 +46,13 @@ class ComentarioController extends Controller
         $request->validate([
             'contenido' => 'required|string|max:1000',
         ]);
-    
+
         $comentario->contenido = $request->contenido;
         $comentario->save();
-    
-        return redirect()->back()->with('success', 'Comentario actualizado correctamente.');
+
+        return redirect()->route('instrumentos.show', $comentario->instrumento_id)
+            ->with('success', 'Comentario actualizado correctamente.');
     }
-    
+
+
 }

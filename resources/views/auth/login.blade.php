@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <title>Music Store - Iniciar sesión</title>
+    <title>Son Arte - Iniciar sesión</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="{{ asset('images/SonArte.png') }}">
+
     <!-- Bootstrap y FontAwesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="{{ asset('css/login.css') }}">
 </head>
+
 <body>
-    <div class="login-bg d-flex justify-content-center align-items-center py-4">
-        <div class="login-card row no-gutters shadow-lg rounded-lg overflow-hidden">
-            <!-- Lado Ilustración -->
-            <div class="col-md-6 ilustracion d-none d-md-flex flex-column justify-content-center align-items-center text-center p-4">
-                <h1 class="logo-title mb-4">MUSIC STORE</h1>
-                <img src="{{ asset('img/instrumentos-login.png') }}" alt="Instrumentos" class="img-fluid mb-2" style="max-height: 270px;">
+    <div class="login-bg d-flex justify-content-center align-items-center py-4" style="min-height: 100vh;">
+        <div class="login-card row no-gutters shadow-lg rounded-lg overflow-hidden mx-1">
+            <div
+                class="col-md-6 ilustracion d-none d-md-flex flex-column justify-content-center align-items-center text-center p-4">
+                <h1 class="logo-title mb-4">SON ARTE</h1>
+                <img src="{{ asset('images/SonArte.png') }}" alt="Instrumentos" class="img-fluid mb-2"
+                    style="max-height: 220px;">
             </div>
-            <!-- Lado Formulario -->
-            <div class="col-md-6 bg-white p-5">
-                <h2 class="mb-4 font-weight-bold login-title">Iniciar sesión</h2>
+            <div class="col-md-6 bg-white p-5 d-flex flex-column justify-content-center">
+                <h2 class="mb-4 font-weight-bold login-title text-center text-md-left">Iniciar sesión</h2>
                 @if (session('login_intentado') && $errors->any())
                     <div class="alert alert-danger">
                         <ul class="mb-0">
@@ -33,7 +37,8 @@
                     @csrf
                     <div class="form-group">
                         <label for="email">Correo electrónico</label>
-                        <input type="email" name="email" class="form-control form-control-lg" value="{{ old('email') }}" required autofocus>
+                        <input type="email" name="email" class="form-control form-control-lg" value="{{ old('email') }}"
+                            required autofocus>
                         <div class="invalid-feedback">
                             Introduce un correo electrónico válido.
                         </div>
@@ -44,7 +49,8 @@
                             <a href="#" class="forgot-link">¿Olvidaste la contraseña?</a>
                         </div>
                         <div class="input-group">
-                            <input type="password" name="password" id="password" class="form-control form-control-lg" required>
+                            <input type="password" name="password" id="password" class="form-control form-control-lg"
+                                required>
                             <div class="input-group-append">
                                 <span class="input-group-text bg-transparent show-password" style="cursor:pointer;">
                                     <i class="fas fa-eye"></i>
@@ -66,4 +72,5 @@
     </div>
     <script src="{{ asset('js/login.js') }}"></script>
 </body>
+
 </html>

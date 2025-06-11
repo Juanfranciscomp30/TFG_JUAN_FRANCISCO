@@ -1,13 +1,10 @@
-/* login.css */
 
-/* Fondo general */
 .login-bg {
     background: linear-gradient(120deg, #031926 65%, #468189 100%);
     min-height: 100vh;
     transition: background 0.5s;
 }
 
-/* Tarjeta login */
 .login-card {
     background: #F4E9CD;
     border-radius: 1rem;
@@ -17,7 +14,6 @@
     overflow: hidden;
 }
 
-/* Lado ilustración */
 .ilustracion {
     background: linear-gradient(120deg, #031926 70%, #468189 100%);
     color: #F4E9CD;

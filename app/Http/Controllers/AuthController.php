@@ -56,10 +56,9 @@ class AuthController extends Controller
         $user->password = Hash::make($request->password);
         $user->save();
 
-        // Auto-login tras registro (opcional)
         Auth::login($user);
 
-        return redirect('/instrumentos'); // Redirige a instrumentos tras registrar
+        return redirect('/instrumentos');
     }
 
     // Logout

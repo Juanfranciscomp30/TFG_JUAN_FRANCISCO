@@ -1,3 +1,4 @@
+//Validacion con boostrap
 (function () {
     'use strict';
     var forms = document.getElementsByClassName('needs-validation');
@@ -12,6 +13,7 @@
     });
 })();
 
+// Mostrar/ocultar contraseña en el formulario de login
 document.addEventListener("DOMContentLoaded", function() {
     document.querySelectorAll('.show-password').forEach(btn => {
         btn.addEventListener('click', function() {

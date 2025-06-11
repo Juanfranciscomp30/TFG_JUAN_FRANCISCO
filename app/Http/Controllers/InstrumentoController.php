@@ -10,33 +10,16 @@ class InstrumentoController extends Controller
 {
 
 
-    public function index(Request $request)
+    public function index()
     {
-        // Obtener todos los tipos de instrumentos (sin duplicados)
+        // Obtener los tipos de instrumentos sin duplicados
         $tipos = Instrumento::select('tipo')->distinct()->pluck('tipo');
 
-        $query = Instrumento::query();
-
-        // Filtrar por tipo si se ha seleccionado
-        if ($request->filled('tipo')) {
-            $query->where('tipo', $request->tipo);
-        }
-
-        // Filtrar por modelo si se ha proporcionado
-        if ($request->filled('modelo')) {
-            $query->whereRaw('LOWER(modelo) LIKE ?', ['%' . strtolower(trim($request->modelo)) . '%']);
-        }
-
-        // Filtrar por precio si se ha proporcionado
-        if ($request->filled('precioMax')) {
-            $query->where('precio', '<=', $request->precioMax);
-        }
-
-        // Obtener los resultados filtrados
-        $instrumentos = $query->get();
+        $instrumentos = Instrumento::all();
 
         return view('instrumentos.index', compact('instrumentos', 'tipos'));
     }
+
 
     public function show($id)
     {

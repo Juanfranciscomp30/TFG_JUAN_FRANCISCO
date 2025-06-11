@@ -3,7 +3,6 @@ body {
     color: #031926;
 }
 
-/* Contenedor general */
 .instrumento-detalle .container {
     background: #F4E9CD;
     border-radius: 0;
@@ -12,7 +11,6 @@ body {
     margin-bottom: 36px;
 }
 
-/* Imagen del instrumento */
 .instrumento-img {
     max-width: 100%;
     border-radius: 0;
@@ -21,7 +19,6 @@ body {
     box-shadow: 0 1.5px 9px #03192611;
 }
 
-/* Bloque de info */
 .instrumento-detalle h1 {
     font-size: 2.1rem;
     font-weight: bold;
@@ -38,7 +35,6 @@ body {
     margin-right: 3px;
 }
 
-/* Formulario añadir carrito */
 .instrumento-detalle form button[type="submit"] {
     background: #468189;
     color: #fff;
@@ -54,7 +50,6 @@ body {
     color: #fff;
 }
 
-/* Radios colores disponibles */
 .form-check-input:checked {
     background-color: #468189;
     border-color: #468189;
@@ -63,7 +58,6 @@ body {
     border-radius: 0;
 }
 
-/* Bloque descripción */
 .descripcion {
     margin-top: 36px;
     padding: 1.2rem 1.5rem;
@@ -73,7 +67,6 @@ body {
     border-left: 4.5px solid #468189;
 }
 
-/* Comentarios */
 .comentarios h3, .descripcion h3 {
     color: #468189;
     margin-bottom: 22px;
@@ -134,7 +127,6 @@ body {
     color: #fff;
 }
 
-/* Modal edición */
 .modal-content {
     border-radius: 0;
     background: #F4E9CD;
@@ -199,9 +191,15 @@ body {
     margin-top: 30px;
 }
 
-.instrumento-img {
-    max-width: 100%;
-    border-radius: 10px;
+.img-instrumento {
+    width: 100%;       
+    height: 400px;      
+    object-fit: contain;
+    background: #f8f9fa;  
+    border: 1px solid #ddd;
+    padding: 8px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px #0001;
 }
 
 .descripcion {
@@ -211,12 +209,31 @@ body {
     border-radius: 10px;
 }
 
-
 @media (max-width: 991.98px) {
     .instrumento-detalle .container {
         padding: 1.2rem 0.5rem;
     }
     .descripcion {
         padding: 1.1rem 0.5rem;
+    }
+    .instrumento-img {
+        margin-bottom: 24px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .instrumento-detalle .container {
+        padding: 0.6rem 0.1rem;
+    }
+    .descripcion {
+        padding: 1rem 0.3rem;
+        margin-top: 22px;
+    }
+    .comentarios.container {
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+    .instrumento-img {
+        margin-bottom: 20px;
     }
 }

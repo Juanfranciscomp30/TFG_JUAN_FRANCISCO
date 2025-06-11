@@ -1,8 +1,8 @@
 
     .footer-custom {
-        background: #031926; /* Fondo principal */
-        color: #F4E9CD; /* Champagne */
-        border-top: 4px solid #468189; /* Borde superior metálico */
+        background: #031926; 
+        color: #F4E9CD; 
+        border-top: 4px solid #468189; 
         letter-spacing: 1px;
     }
     .footer-title {
@@ -10,12 +10,12 @@
         text-shadow: 0 2px 6px #03192660;
     }
     .footer-link {
-        color: #77ACA2; /* Green Sheen */
+        color: #77ACA2; 
         transition: color 0.2s;
         font-size: 1.4em;
     }
     .footer-link:hover {
-        color: #9DBEBB; /* Opal */
+        color: #9DBEBB; 
         text-decoration: none;
     }
     .footer-custom p {

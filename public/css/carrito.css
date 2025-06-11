@@ -80,6 +80,18 @@ body {
     box-shadow: 0 3px 12px rgba(70,129,137,0.14);
     animation: totalFlash 0.7s;
 }
+
+.img-instrumento {
+    width: 100%;       
+    height: 60%;      
+    object-fit: contain;
+    background: #f8f9fa; 
+    border: 1px solid #ddd;
+    padding: 8px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px #0001;
+}
+
 @keyframes totalFlash {
     0%   { background: #F4E9CD;}
     70%  { background: var(--green-sheen);}

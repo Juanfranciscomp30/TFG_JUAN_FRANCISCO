@@ -21,7 +21,7 @@ class Instrumento extends Model
     ];
 
     public function comentarios()
-{
-    return $this->hasMany(Comentario::class);
-}
+    {
+        return $this->hasMany(Comentario::class);
+    }
 }

@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instrumentos Disponibles</title>
-    <!-- Bootstrap CSS -->
+    <link rel="icon" type="image/x-icon" href="{{ asset('images/SonArte.png') }}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="{{ asset('css/instrumentos.css') }}">
-    
 </head>
+
 <body class="body-instrumentos">
     @include('layouts.barraNavegacion')
 
     <div class="container mt-4">
         <div class="row">
-            <!-- Filtro lateral con card y estilos -->
-            <div class="col-md-3">
+            <div class="col-12 col-md-3 mb-3">
                 <div class="filtro-card">
                     <div class="mb-3">
                         <label for="tipo" class="form-label">Tipo de Instrumento</label>
@@ -35,7 +34,8 @@
                     <div class="mb-3">
                         <label for="precioMax">Precio máximo:</label>
                         <div id="precioValueBox" class="range-value">1000€</div>
-                        <input type="range" id="precioMax" min="0" max="5000" step="500" value="5000" class="custom-range">
+                        <input type="range" id="precioMax" min="0" max="5000" step="500" value="5000"
+                            class="custom-range">
                         <div class="range-steps">
                             <span>0€</span>
                             <span>1000€</span>
@@ -48,15 +48,13 @@
                 </div>
             </div>
 
-            <div class="col-md-9">
+            <div class="col-12 col-md-9">
                 <div class="row" id="contenedorInstrumentos">
                     @foreach ($instrumentos as $instrumento)
-                        <div class="col-md-4 mb-4 instrumento-tarjeta"
-                             data-tipo="{{ $instrumento->tipo }}"
-                             data-modelo="{{ strtolower($instrumento->modelo) }}"
-                             data-precio="{{ $instrumento->precio }}">
+                        <div class="col-12 col-sm-6 col-md-4 mb-4 instrumento-tarjeta" data-tipo="{{ $instrumento->tipo }}"
+                            data-modelo="{{ strtolower($instrumento->modelo) }}" data-precio="{{ $instrumento->precio }}">
                             <div class="card h-100 shadow">
-                                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Instrumento">
+                                <img src="/{{ $instrumento->foto }}" class="img-instrumento" alt="Instrumento">
                                 <div class="card-body">
                                     <h5 class="card-title">
                                         <i class="fa-solid fa-music text-primary"></i>
@@ -70,7 +68,8 @@
                                         <i class="fa-solid fa-euro-sign text-warning"></i>
                                         {{ $instrumento->precio }} €
                                     </p>
-                                    <a href="{{ route('instrumentos.show', $instrumento->id) }}" class="btn btn-outline-primary btn-block">
+                                    <a href="{{ route('instrumentos.show', $instrumento->id) }}"
+                                        class="btn btn-outline-primary btn-block">
                                         <i class="fa-solid fa-eye"></i> Ver detalles
                                     </a>
                                 </div>
@@ -84,10 +83,12 @@
             </div>
         </div>
     </div>
-    
+
     @include('layouts.footer')
 
-
     <script src="{{ asset('js/instrumentos.js') }}"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

@@ -10,7 +10,7 @@
 
 <body>
     @include('layouts.barraNavegacion')
-    
+
     <h3>Editar comentario</h3>
 
     <form action="{{ route('comentarios.update', $comentario->id) }}" method="POST">
