@@ -123,7 +123,7 @@
                             <p>¿Estás seguro que deseas finalizar tu compra?</p>
                         </div>
                         <div class="modal-footer" style="background: var(--opal);">
-                            <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal" >Cancelar</button>
                             <form action="{{ route('compra.finalizar') }}" method="POST">
                                 @csrf
                                 <button type="submit" class="btn btn-success">Confirmar Compra</button>
@@ -149,6 +149,12 @@
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+
 
     <script src="{{ asset('js/carrito.js') }}"></script>
 

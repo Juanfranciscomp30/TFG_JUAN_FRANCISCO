@@ -70,4 +70,23 @@ class AuthController extends Controller
 
         return redirect('/login');
     }
+
+
+    public function recuperarPassword(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|email|exists:users,email',
+            'password' => 'required|confirmed|min:6',
+        ]);
+
+        $user = User::where('email', $request->email)->first();
+
+        if ($user) {
+            $user->password = Hash::make($request->password);
+            $user->save();
+            return back()->with('success', 'Contraseña actualizada correctamente.');
+        } else {
+            return back()->with('error', 'El correo no existe.');
+        }
+    }
 }

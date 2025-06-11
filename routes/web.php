@@ -13,6 +13,8 @@ Route::post('/login', [AuthController::class, 'login']);
 Route::post('logout', [AuthController::class, 'logout']);
 Route::get('/register', [AuthController::class, 'showRegistrationForm'])->name('register.form');
 Route::post('/register', [AuthController::class, 'register'])->name('register');
+Route::post('/recuperar-password', [AuthController::class, 'recuperarPassword'])->name('recuperar.password');
+
 
 // *** INSTRUMENTOS — rutas públicas ***
 Route::get('/instrumentos', [InstrumentoController::class, 'index']); // Listado público

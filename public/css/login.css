@@ -93,6 +93,9 @@
     font-size: 1rem;
 }
 
+.bg-opal { background-color: var(--opal) !important; }
+.bg-champagne { background-color: var(--champagne) !important; }
+
 @media (max-width: 767.98px) {
     .login-card {
         flex-direction: column;

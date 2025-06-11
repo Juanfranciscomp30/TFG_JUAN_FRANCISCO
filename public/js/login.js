@@ -31,3 +31,19 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+//Validacion contraseñas del recuperar contraseña
+document.getElementById('formRecuperar').addEventListener('submit', function(e) {
+    const pass1 = document.getElementById('passwordNueva').value;
+    const pass2 = document.getElementById('passwordRepeat').value;
+    const mensaje = document.getElementById('mensajeRecuperar');
+    mensaje.classList.add('d-none');
+    mensaje.classList.remove('alert-success', 'alert-danger', 'animate__fadeInDown');
+
+    if (pass1 !== pass2) {
+        e.preventDefault();
+        mensaje.textContent = "Las contraseñas no coinciden.";
+        mensaje.classList.remove('d-none');
+        mensaje.classList.add('alert', 'alert-danger', 'animate__animated', 'animate__fadeInDown');
+    }
+});
